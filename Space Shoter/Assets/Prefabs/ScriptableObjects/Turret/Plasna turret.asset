@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb31ff34e2ac1da42949c0482dd840b7, type: 3}
+  m_Name: Plasna turret
+  m_EditorClassIdentifier: 
+  mode: 0
+  projectilePrefab: {fileID: 6359488031671428959, guid: 740bfaa635ca61d4babf4f016b608769, type: 3}
+  rateOfFire: 0.1
+  energyUsage: 1
+  ammoUsage: 0
+  launchSFX: {fileID: 0}
