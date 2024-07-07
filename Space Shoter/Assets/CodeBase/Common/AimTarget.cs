@@ -11,19 +11,25 @@ namespace Common
         private bool isTarget;
         public bool IsTarget => isTarget;
         private Event newTarget;
+        private SpriteRenderer sprite;
 
+        private void Start()
+        {
+                sprite = GetComponent<SpriteRenderer>();
+        }
+        
         private void Update()
         {
             if (aim != null)
             {
                 if (Vector2.Distance(aim.transform.position, transform.position) > aim.Radius || aim.NoTarget == true)
                 {
-                    GetComponent<SpriteRenderer>().enabled = false;
+                    sprite.enabled = false;
                     isTarget = false;
                 }
                 else
                 {
-                    GetComponent<SpriteRenderer>().enabled = true;
+                    sprite.enabled = true;
                     isTarget = true;
                 }
 
@@ -34,12 +40,12 @@ namespace Common
             }
             if (aim == null)
             {
-                // Временно.
+                // Г‚Г°ГҐГ¬ГҐГ­Г­Г®.
                 aim = FindAnyObjectByType<Aim>();
             }
         }
         /// <summary>
-        /// Возвращает позицию цели
+        /// Г‚Г®Г§ГўГ°Г Г№Г ГҐГІ ГЇГ®Г§ГЁГ¶ГЁГѕ Г¶ГҐГ«ГЁ
         /// </summary>
         /// <returns></returns>
         public Vector2 GetTargetPosition()
